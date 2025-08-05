@@ -1,9 +1,9 @@
 # Accent Icons Theme
 It is a Gnome extension that changes the icons themes, based on the accent color chosen by the user in Gnome Settings (gnome-control-center), Appearance screen and by preferred color schema Light or Dark.  
 The extension is a modification of the [Accent Color Icon Theme Changer For GNOME](https://github.com/taiwbi/gnome-accent-directories) extension, thank you `Mohammad Mahdi Tayebi` for your work.  
-This extension is included in **BRGV-OS** Linux distribution.  
+This extension is included in [**BRGV-OS**](https://github.com/florintanasa/brgvos-void) Linux distribution.  
 
-![Accent User Theme](./screenshots/accent_icons_theme.png)  
+![Accent User Theme](./screenshots/accent-icons-theme.png)  
   
 ## What is necessary ...
 BRGV-OS have all [Fluent icon theme](https://github.com/vinceliuice/Fluent-icon-theme) installed in `/usr/share/icons`, thank you `Vince` for your work.  
