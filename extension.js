@@ -17,14 +17,16 @@
  */
 import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
 import Gio from 'gi://Gio';
+
 export default class AccentColorIconsThemeExtension extends Extension {
     _settings;
     _preferences;
     _accentColorChangedId = 0;
     _colorSchemeChangedId = 0;
-    _customThemeChangedId = 0;
     iconThemesLight = Object.values({});
     iconThemesDark = Object.values({});
+
+    // Next method is run when the extension is enabled
     enable() {
         // Get the interface settings
         this._settings = new Gio.Settings({
@@ -62,15 +64,17 @@ export default class AccentColorIconsThemeExtension extends Extension {
         // Initial theme update
         this._onAccentColorChanged();
     }
+
+    // Next metod is run when the estension is disabled 
     disable() {
         // Disconnect the signal handler
         if (this._settings && this._accentColorChangedId) {
             this._settings.disconnect(this._accentColorChangedId);
             this._accentColorChangedId = 0;
         }
-        if (this._preferences && this._customThemeChangedId) {
-            this._preferences.disconnect(this._customThemeChangedId);
-            this._customThemeChangedId = 0;
+        if (this._preferences && this._colorSchemeChangedId) {
+            this._preferences.disconnect(this._colorSchemeChangedId);
+            this._colorSchemeChangedId = 0;
         }
         // Clear the iconThemes array
         this.iconThemesLight = [];
@@ -81,6 +85,8 @@ export default class AccentColorIconsThemeExtension extends Extension {
         this._settings = null;
         this._preferences = null;
     }
+
+     // Next metod is called when extension is enabled, color accent, edit a new path to the themes, or the switch for set link gtk4 local is changed
     _onAccentColorChanged() {
         if(this._settings?.get_string("color-scheme") === 'prefer-dark')
         {
@@ -106,6 +112,8 @@ export default class AccentColorIconsThemeExtension extends Extension {
         }
 
     }
+
+    // Next method set the theme
     _setIconTheme(themeName) {
         // Set the icon theme
         this._settings?.set_string("icon-theme", themeName);
