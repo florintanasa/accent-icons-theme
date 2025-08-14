@@ -14,7 +14,7 @@
             <summary>Custom icons theme for blue accent</summary>
         </key>
         <key type="s" name="teal-theme-light">
-            <default>"Fluent-light"</default>
+            <default>"Fluent-teal-light"</default>
             <summary>Custom icons theme for teal accent</summary>
         </key>
         <key type="s" name="green-theme-light">
@@ -50,7 +50,7 @@
             <summary>Custom icons theme for blue accent</summary>
         </key>
         <key type="s" name="teal-theme-dark">
-            <default>"Fluent-dark"</default>
+            <default>"Fluent-teal-dark"</default>
             <summary>Custom icons theme for teal accent</summary>
         </key>
         <key type="s" name="green-theme-dark">
