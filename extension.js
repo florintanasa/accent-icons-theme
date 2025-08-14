@@ -35,7 +35,7 @@ export default class AccentColorIconsThemeExtension extends Extension {
         // Initializing icon themes
         this.iconThemesDark = Object.values({
             blue: "Fluent-dark",
-            teal: "Fluent-dark",
+            teal: "Fluent-teal-dark",
             green: "Fluent-green-dark",
             yellow: "Fluent-yellow-dark",
             orange: "Fluent-orange-dark",
@@ -46,7 +46,7 @@ export default class AccentColorIconsThemeExtension extends Extension {
         });
         this.iconThemesLight = Object.values({
             blue: "Fluent-light",
-            teal: "Fluent-light",
+            teal: "Fluent-teal-light",
             green: "Fluent-green-light",
             yellow: "Fluent-yellow-light",
             orange: "Fluent-orange-light",
